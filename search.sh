@@ -77,6 +77,6 @@ if [ ${results} ]; then
 	echo "$alfred_result"
 	exit
 else
-	noResultsFound
+	noProjectMatched
 	exit
 fi

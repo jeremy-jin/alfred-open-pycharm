@@ -53,17 +53,17 @@ function noFoundCommandLine() {
     }]}'
 }
 
-function noResultsFound() {
-    echo '{"items": [
+function noProjectMatched() {
+  echo '{"items": [
     {
-        "uid": "",
-        "type": "",
-        "title": "No Results Found",
-        "subtitle": "Try other query conditions......",
-        "arg": "",
-        "icon": {
-            "path": "./no-results.png"
-        },
-        "autocomplete": "",
+      "uid": "",
+      "type": "",
+      "title": "No Project matched",
+      "subtitle": "Try other query conditions......",
+      "arg": "",
+      "icon": {
+          "path": "./no-results.png"
+      },
+      "autocomplete": "",
     }]}'
 }
