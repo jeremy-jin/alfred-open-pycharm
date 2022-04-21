@@ -1,1 +1,1 @@
-# alfred-pycharm
+# Alfred-open-pycharm
