@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+# 把查询到的Project格式化后，返回给Alfred进行展示
 function formatResult() {
     projects=("$@")
     printf "{\n"
@@ -22,6 +23,7 @@ function formatResult() {
     printf "}\n"
 }
 
+# 不支持的Pycharm版本，提示信息
 function unSupportVersion() {
     echo '{"items": [
     {
@@ -37,7 +39,7 @@ function unSupportVersion() {
     }]}'
 }
 
-
+# 找不到Command-Line Launcher File时，提示信息
 function noFoundCommandLine() {
     echo '{"items": [
     {
@@ -53,6 +55,7 @@ function noFoundCommandLine() {
     }]}'
 }
 
+# 查询无结果时，提示信息
 function noProjectMatched() {
   echo '{"items": [
     {
