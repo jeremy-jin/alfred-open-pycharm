@@ -30,4 +30,19 @@ This workflow needs to ensure that Pycharm's command line launcher is working:
 2. Double-click on downloaded file (alfred-open-pycharm.alfredworkflow)
 
 ### How to use
+**Keywords:**  
+- `charm`: Search for recently opened projects
+- `charmf`: Search for folders that are not recently opened projects
 
+**Example**   
+- Search `Open Recent`   
+  1) Step 1    
+    ![pycharm-alfred-workflow-create-cli](./doc/images/search_open_recent.png) 
+  2) Step 2    
+    Select a project searched and press the `Enter` key, this will open the project using `Pycharm APP`.   
+    
+- Reveal a project in Finder
+  1) Step 1    
+    ![pycharm-alfred-workflow-create-cli](./doc/images/search_open_recent.png)
+  2) Step 2    
+  Select a project searched and press the `Control` + `Enter` key, this will reveal the project in Finder. 
