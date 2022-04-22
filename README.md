@@ -37,12 +37,12 @@ This workflow needs to ensure that Pycharm's command line launcher is working:
 **Example**   
 - Search `Open Recent`   
   1) Step 1    
-    ![pycharm-alfred-workflow-create-cli](./doc/images/search_open_recent.png) 
+    ![pycharm-alfred-workflow-search-open-recent](./doc/images/search_open_recent.png) 
   2) Step 2    
     Select a project searched and press the `Enter` key, this will open the project using `Pycharm APP`.   
     
 - Reveal a project in Finder
   1) Step 1    
-    ![pycharm-alfred-workflow-create-cli](./doc/images/search_open_recent.png)
+    ![pycharm-alfred-workflow-search-open-recent](./doc/images/search_open_recent.png)
   2) Step 2    
   Select a project searched and press the `Control` + `Enter` key, this will reveal the project in Finder. 
