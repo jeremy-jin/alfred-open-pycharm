@@ -18,7 +18,7 @@ to improve development efficiency
 ### Requirements
 You need Alfred 3.5+  
 
-This workflow needs to ensure that Pycharm's command line launcher is working:
+This workflow needs to ensure that Pycharm's command line launcher is working:    
 ####Create command line launcher
 **Step Example**:  
     1. Open The Pycharm App  
