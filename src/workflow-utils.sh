@@ -62,7 +62,7 @@ function noProjectMatched() {
       "uid": "",
       "type": "",
       "title": "No Project matched",
-      "subtitle": "Try other query conditions......",
+      "subtitle": "Try other query conditions..a....",
       "arg": "",
       "icon": {
           "path": "./no-results.png"
