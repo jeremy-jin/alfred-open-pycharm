@@ -1,9 +1,7 @@
 # Alfred-open-pycharm
-*** 
-***
 
 ## What's *Alfred-open-pycharm*
-***
+
 **Alfred-open-pycharm** is a workflow plugin on Alfred, 
 which can help you to quickly open your favorite projects, 
 to improve development efficiency
@@ -14,12 +12,12 @@ to improve development efficiency
 4.How to quickly reveal the project or the folder in Finder instead
 
 ## Installation
-***
+
 ### Requirements
 You need Alfred 3.5+  
 
 This workflow needs to ensure that Pycharm's command line launcher is working:    
-####Create command line launcher
+#### Create command line launcher
 **Step Example**:  
     1. Open The Pycharm App  
     2. Go to Tools and Create Command-line Launcher, as follows:    
