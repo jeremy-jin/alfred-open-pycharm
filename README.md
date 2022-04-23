@@ -45,4 +45,4 @@ This workflow needs to ensure that Pycharm's command line launcher is working:
   1) Step 1    
     ![pycharm-alfred-workflow-search-open-recent](./doc/images/search_open_recent.png)
   2) Step 2    
-  Select a project searched and press the `Control` + `Enter` key, this will reveal the project in Finder. 
+  Select a project searched and press the `option` + `Enter` key, this will reveal the project in Finder. 
