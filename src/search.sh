@@ -30,16 +30,7 @@ if [ "$VERSION_YEAR" == "2019" ]; then
 	RECENT_PROJECTS_XML='/options/recentProjectDirectories.xml'
 	RECENT_XPATH=".//component[@name='RecentDirectoryProjectsManager']/option[@name='recentPaths']/list/option/@value"
 
-elif [ "$VERSION_YEAR" == "2020" ]; then
-  	if [ "$VERSION_MONTH" == "3" ]; then
-		RECENT_PROJECTS_XML='/options/recentProjects.xml'
-		RECENT_XPATH=".//component[@name='RecentProjectsManager']/option[@name='additionalInfo']/map/entry/@key"
-	else
-		RECENT_PROJECTS_XML='/options/recentProjectDirectories.xml'
-		RECENT_XPATH=".//component[@name='RecentProjectsManager']/option[@name='recentPaths']/list/option/@value"
-  fi
-
-elif [ "$VERSION_YEAR" == "2021" ]; then
+elif [ "$VERSION_YEAR" -ge "2020" ]; then
 	RECENT_PROJECTS_XML='/options/recentProjects.xml'
 	RECENT_XPATH=".//component[@name='RecentProjectsManager']/option[@name='additionalInfo']/map/entry/@key"
 
