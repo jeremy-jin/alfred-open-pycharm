@@ -1,0 +1,5 @@
+APP_PATH='/Applications/PyCharm.app/'
+APP_SUPPORT_DIR="${HOME}/Library/Application Support/JetBrains/PyCharm"
+
+LAUNCHER_COMMAND_FOR_2019_AND_2020='/usr/local/bin/charm'
+LAUNCHER_COMMAND_FOR_2021_AND_AFTER='open -na "PyCharm.app"'

@@ -1,17 +1,16 @@
 #!/usr/bin/env bash
 
-# 把查询到的Project格式化后，返回给Alfred进行展示
 function formatResult() {
-    projects=("$@")
+    read -ra projects <<< "$1"
+
     printf "{\n"
     printf '\t"items":[\n'
-
     for project in "${projects[@]}"
     do
         project_name=$(echo "$project" | awk -F '/' '{print $NF}')
         printf '\t\t{\n'
         printf '\t\t\t"uid": "%s",\n' "$project_name"
-        printf '\t\t\t"type": "file",\n'
+        printf '\t\t\t"type": "project",\n'
         printf '\t\t\t"title": "%s",\n' "$project_name"
         printf '\t\t\t"subtitle": "%s",\n' "${project}"
         printf '\t\t\t"arg": "%s",\n' "${project}"
@@ -23,14 +22,13 @@ function formatResult() {
     printf "}\n"
 }
 
-# 不支持的Pycharm版本，提示信息
 function unSupportVersion() {
     echo '{"items": [
     {
         "uid": "",
         "type": "",
         "title": "Not supported the version of Pycharm",
-        "subtitle": "This version of Pycharm is not supported, please use version 2019/2020/2021.",
+        "subtitle": "This version of Pycharm is not supported, Please use 2019 or later.",
         "arg": "",
         "icon": {
             "path": "./warning.png"
@@ -39,7 +37,22 @@ function unSupportVersion() {
     }]}'
 }
 
-# 找不到Command-Line Launcher File时，提示信息
+function noPycharmApp() {
+    echo '{"items": [
+    {
+        "uid": "",
+        "type": "",
+        "title": "Pycharm is not installed",
+        "subtitle": "please check that if Pycharm APP is already installed.",
+        "arg": "",
+        "icon": {
+            "path": "./warning.png"
+        },
+        "autocomplete": "",
+    }]}'
+}
+
+
 function noFoundCommandLine() {
     echo '{"items": [
     {
@@ -55,7 +68,6 @@ function noFoundCommandLine() {
     }]}'
 }
 
-# 查询无结果时，提示信息
 function noProjectMatched() {
   echo '{"items": [
     {
