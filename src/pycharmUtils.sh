@@ -39,7 +39,7 @@ function getRecentProjects() {
         project_name=$(echo "$project_path" | awk -F '/' '{print $NF}')
         match_result=$(echo "$project_name" | grep "${QUERY}")
         if [ "$match_result" ]; then
-          results+=("$project_path")
+          RESULTS+=("$project_path")
         fi
       else
         # 如果没有输入过滤字符串，直接添加结果列表中
