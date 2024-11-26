@@ -26,7 +26,7 @@
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string>dfgd</string>
+				<string>Reveal Project In Finder</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -49,7 +49,7 @@
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string>ijkj</string>
+				<string>Reveal Project In Finder</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -58,36 +58,13 @@
 	<key>createdby</key>
 	<string>Jeremy Jin</string>
 	<key>description</key>
-	<string>Quickly Open By Pycharm Workflows</string>
+	<string>Quickly Open......</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Quickly Open By Pycharm Workflows</string>
+	<string>Quickly Open Project</string>
 	<key>objects</key>
 	<array>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>PATH=/usr/local/bin:$PATH /usr/local/bin/charm $1</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>68E9E369-81F3-4764-AE82-F7A05D541B5C</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -126,7 +103,7 @@ sh search.sh $query</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>Open Recent Project with Pycharm</string>
 				<key>title</key>
 				<string>Open Recent Project</string>
 				<key>type</key>
@@ -140,6 +117,31 @@ sh search.sh $query</string>
 			<string>17162B9E-C683-4FED-9F44-886B0B489E5C</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>#!/bin/bash
+
+sh lunch.sh $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>68E9E369-81F3-4764-AE82-F7A05D541B5C</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -207,9 +209,9 @@ sh search.sh $query</string>
 				<key>sortmode</key>
 				<integer>0</integer>
 				<key>subtext</key>
-				<string>Open with Visual Studio Code</string>
+				<string>Open with Pycharm</string>
 				<key>title</key>
-				<string>Visual Studio Code</string>
+				<string>Pycharm</string>
 				<key>types</key>
 				<array>
 					<string>public.folder</string>
@@ -239,7 +241,12 @@ sh search.sh $query</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Alfred-open-pycharm is a workflow plugin on Alfred, which can help you to quickly open your favorite projects, to improve development efficiency
+
+1.How to quickly open a recently opened project
+2.How to quickly open a project that have not been recently opened
+3.How to quickly switch project windows when multiple project windows are opened
+4.How to quickly reveal the project or the folder in Finder instead</string>
 	<key>uidata</key>
 	<dict>
 		<key>17162B9E-C683-4FED-9F44-886B0B489E5C</key>
@@ -247,41 +254,43 @@ sh search.sh $query</string>
 			<key>note</key>
 			<string>Type "charm" followed by the name of your project.</string>
 			<key>xpos</key>
-			<integer>105</integer>
+			<real>105</real>
 			<key>ypos</key>
-			<integer>25</integer>
+			<real>25</real>
 		</dict>
 		<key>2AD2738B-CE5E-485B-AA44-C089771FCF3B</key>
 		<dict>
 			<key>note</key>
 			<string>Hold the Alt key when pressing Return to reveal the folder in Finder instead.</string>
 			<key>xpos</key>
-			<integer>575</integer>
+			<real>530</real>
 			<key>ypos</key>
-			<integer>245</integer>
+			<real>235</real>
 		</dict>
 		<key>68E9E369-81F3-4764-AE82-F7A05D541B5C</key>
 		<dict>
 			<key>note</key>
-			<string>Open the project at the specified address via "/usr/local/bin/charm".</string>
+			<string>Open the project at the specified address.</string>
 			<key>xpos</key>
-			<integer>490</integer>
+			<real>530</real>
 			<key>ypos</key>
-			<integer>25</integer>
+			<real>30</real>
 		</dict>
 		<key>A4EE0406-8CBF-4F0D-BF56-E03AC0557CF6</key>
 		<dict>
 			<key>note</key>
 			<string>Type "charmf" followed by the name of your folder. The scope is set to home folder only.</string>
 			<key>xpos</key>
-			<integer>105</integer>
+			<real>105</real>
 			<key>ypos</key>
-			<integer>235</integer>
+			<real>235</real>
 		</dict>
 	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
 	<key>version</key>
-	<string>V1.0.0</string>
+	<string>2.0.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/jeremy-jin/alfred-open-pycharm</string>
 </dict>
 </plist>
