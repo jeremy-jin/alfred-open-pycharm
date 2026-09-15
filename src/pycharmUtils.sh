@@ -50,5 +50,34 @@ function getRecentProjects() {
   fi
 }
 
+# 判断输入字符串是否是路径（支持 ~ 波浪号展开）
+# 返回值：
+# 0 = 是路径（包含 / 或者以 ~ 开头）
+# 1 = 不是路径
+# 输出：标准输出打印【展开后的绝对路径】，如果不是路径则输出空字符串
+is_path() {
+    local input="$1"
+    local expanded_path
+
+    # 情况1：以 ~ 开头：波浪号展开
+    if [[ "$input" == ~* ]]; then
+        # bash原生波浪号扩展
+        expanded_path="${input/#\~/$HOME}"
+        echo "$expanded_path"
+        return 0
+    fi
+
+    # 情况2：以 / 开头，绝对路径
+    if [[ "$input" == /* ]]; then
+        expanded_path="$input"
+        echo "$expanded_path"
+        return 0
+    fi
+
+    # 其余判定不是路径，输出空，返回1
+    echo ""
+    return 1
+}
+
 
 
