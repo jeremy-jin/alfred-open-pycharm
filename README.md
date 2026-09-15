@@ -6,10 +6,15 @@
 which can help you to quickly open your favorite projects, 
 to improve development efficiency
 
-1.How to quickly open a recently opened project    
-2.How to quickly open a project that have not been recently opened    
-3.How to quickly switch project windows when multiple project windows are opened   
-4.How to quickly reveal the project or the folder in Finder instead
+1. How to quickly open a recently opened project    
+
+2. How to quickly open a project that have not been recently opened   
+
+3. How to quickly switch project windows when multiple project windows are opened  
+
+4. How to quickly reveal the project or the folder in Finder instead
+
+5. How to quickly open the project folder in Terminal
 
 ### Requirements
 You need Alfred 3.5+  
