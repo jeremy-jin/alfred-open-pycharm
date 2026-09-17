@@ -1,0 +1,7 @@
+{
+  "version": "1.0.1",
+  "download_url": "https://github.com/jeremy-jin/alfred-open-pycharm/blob/master/package/alfred-open-pycharm.alfredworkflow",
+  "min_alfred_version": "5.1",
+  "sha256": "",
+  "release_notes": "增加自动版本检测"
+}
