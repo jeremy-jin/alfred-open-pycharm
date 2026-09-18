@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 function formatResult() {
     read -ra projects <<< "$1"
