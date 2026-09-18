@@ -120,12 +120,14 @@ EOF
             return 0
           fi
           # 原始静默curl，无进度通知
-          if ! curl -sL --max-time 15 "${DL_URL}" -o "${TMP_WF}" 2>/dev/null; then
+          if ! curl -sL --max-time 60 "${DL_URL}" -o "${TMP_WF}" 2>/dev/null; then
             echo "[update] download workflow failed" >&2
             rm -f "${TMP_WF}"
             eval "$OLD_OPTS"
             return 0
           fi
+          echo "[update] temp file path: ${TMP_WF}" >&2
+          ls -lh "${TMP_WF}" >&2
           open "${TMP_WF}"
           # 后台延时10秒删除临时文件，不阻塞主线程
 #          (sleep 10; rm -f "${TMP_WF}") &
