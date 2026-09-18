@@ -7,9 +7,6 @@ source ./update-check.sh
 
 QUERY=$1
 
-# Check for workflow updates
-check_workflow_update
-
 # Check if Pycharm APP is already installed
 if [ ! -r "$APP_PATH" ]; then
 	noPycharmApp
