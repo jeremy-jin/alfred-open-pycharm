@@ -1,10 +1,14 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 source config
 source workflowUtils.sh
 source pycharmUtils.sh
+source ./update-check.sh
 
 QUERY=$1
+
+# Check for workflow updates
+check_workflow_update
 
 # Check if Pycharm APP is already installed
 if [ ! -r "$APP_PATH" ]; then
